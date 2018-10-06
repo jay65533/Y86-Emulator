@@ -1,0 +1,26 @@
+#ifndef _Y86EMUL_H_
+#define _Y86EMUL_H_
+
+int mypow(int base, int exp);
+int convert_to_num(unsigned char c) ;
+int convert_to_dec(const char* in);
+int execute(char * mem);
+
+void rrmovl(char* mem);
+void irmovl(char* mem);
+void rmmovl(char* mem);
+void mrmovl(char* mem);
+void op1(char* mem, int func);
+void jxx (char* mem, int func);
+void call(char* mem);
+void ret(char* mem);
+void pushl(char* mem);
+void popl(char* mem);
+void readx(char* mem, int func);
+void writex(char* mem, int func);
+void movsbl(char* mem);
+int read_int_mem_nouse(char* mem, int index);
+void write_int_nouse(char* mem, int val, int index);
+void write_int(char* mem, int val, int index);
+
+#endif
